@@ -1,0 +1,20 @@
+{
+    "name": "shopping-list-generator",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --watchAll"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "jest": "^27.5.1"
+    },
+    "dependencies": {
+        "figlet": "^1.5.2",
+        "inquirer": "^8.2.2",
+        "mysql2": "^2.3.3"
+    }
+}
