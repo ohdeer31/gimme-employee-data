@@ -48,7 +48,7 @@ function searchData() {
                     }
                 ])
                 .then((answer) => {
-                    db.query('INSERT INTO department (department_name) VALUE ?;', answer.nameOfDepartment, function (err, results) {
+                    db.query('INSERT INTO department (department_name) VALUE (?);', answer.nameOfDepartment, function (err, results) {
                         console.log("Added service to the database.");
                         return searchData();
                     })
@@ -81,9 +81,6 @@ function searchData() {
                         }
                     ])
                     .then((answer) => {
-                        // db.query('INSERT INTO employeeRole (title) VALUE (?);', answer.nameOfRole, function (err, results) {
-                        // db.query('INSERT INTO tableAll ( title, salary, department_name ) VALUE (?) FROM department d INNER JOIN employeeRole r ON d.id = r.department_name INNER JOIN employee e ON r.id = e.role_id;', (answer.nameOfRole, answer.salaryOfRole, answer.departmentOfRole), function (err, results) {
-                        // console.log(answer);
                         db.query('INSERT INTO employeeRole SET ?', answer, function (err, results) {
                             if (err) {
                                 console.log(err);
@@ -178,6 +175,9 @@ function searchData() {
                         })
                     })
                 })
+            } else {
+                console.log("Thanks for using!");
+                return;
             }
         })
 };

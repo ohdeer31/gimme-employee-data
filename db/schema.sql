@@ -31,6 +31,3 @@ CREATE TABLE employee (
     REFERENCES employee(id)
     ON DELETE SET NULL
 );
-
--- UPDATE employee as a LEFT JOIN employee as b ON b.manager_id = a.id 
--- SET a.manager_id = concat(b.first_name, " ", b.last_name);
