@@ -46,3 +46,6 @@ SELECT a.id, a.first_name, a.last_name, concat(b.first_name, " ", b.last_name) a
 
 
 SELECT employee.id, employee.first_name, employee.last_name, employeeRole.title, department.department_name, employeeRole.salary, concat(manager.first_name, ' ', manager.last_name) as manager FROM employee LEFT JOIN employee manager ON manager.id = employee.manager_id LEFT JOIN employeeRole ON employee.role_id = employeeRole.id LEFT JOIN department ON employeeRole.department_id = department.id;
+
+
+UPDATE employee SET 
